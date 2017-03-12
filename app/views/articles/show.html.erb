@@ -1,3 +1,5 @@
+<% @title = 'View Article' %>
+
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
@@ -6,4 +8,7 @@
 <p>
   <strong>Text:</strong>
   <%= @article.text %>
+  <br />
+  <br />
+  <%= link_to 'Back to article list', articles_url %>
 </p>

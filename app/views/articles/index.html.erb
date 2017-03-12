@@ -1,3 +1,5 @@
+<% @title = 'Listing articles' %>
+
 <h1>Listing articles</h1>
 
 <%= link_to 'New article', new_article_url %>
@@ -10,8 +12,22 @@
 
   <% @articles.each do |article| %>
     <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
+      <td>
+        <% if article.title.length > 13 %>
+          <%= article.title[0...12].concat('...') %>
+        <% else %>
+          <%= article.title %>
+        <% end %>
+      </td>
+
+      <td>
+        <% if article.text.length > 10 %>
+          <%= article.text[0...9].concat('...') %>
+        <% else %>
+          <%= article.text %>
+        <% end %>
+      </td>
+
       <td><%= link_to 'Show', article_path(article) %></td>
     </tr>
   <% end %>
