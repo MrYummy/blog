@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% @title = 'New Article' %>
 
 <h1> New Article </h1>
@@ -17,3 +18,22 @@
     <%= f.submit %>
   </p>
 <% end %>
+=======
+<h1> New Article </h1>
+
+<%= form_for :article, url: articles_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+>>>>>>> a30d25ca2d369b8970beb0796fa33825e04dadc4

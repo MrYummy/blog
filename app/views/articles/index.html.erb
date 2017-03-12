@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% @title = 'Listing articles' %>
 
 <h1>Listing articles</h1>
@@ -32,3 +33,23 @@
     </tr>
   <% end %>
 </table>
+=======
+<h1>Listing articles</h1>
+
+<%= link_to 'New article', new_article_url %>
+<br />
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
+>>>>>>> a30d25ca2d369b8970beb0796fa33825e04dadc4
